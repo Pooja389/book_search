@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>home page</title>
+</head>
+<body>
+    {% for name,price,img_url in list %}
+    <div>
+         <img src = "{{img_url}}"width="150" height="auto">
+    </div>
+    <div>
+        <h2>{{name}}</h2>
+        <h2>{{price}}</h2>
+        <P>-----------------------------</P>
+    </div>
+    {% endfor %}
+</body>
+</html>
