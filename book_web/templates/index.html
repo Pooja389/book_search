@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>BOOK SEARCH</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">Book search</a></h1>
+								<hr />
+								<p>A web site that helps you get the book by only name</p>
+							</header>
+							<footer>
+								<a href="#banner" class="button circled scrolly">Start</a>
+							</footer>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="{{url_for('home')}}">Home</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Banner -->
+				<section id="banner">
+					<header>
+						<h2>Hi. You're looking at <strong>Book Search</strong>.</h2>
+						<p>
+							A (free) responsive site made by <a href="http://html5up.net">Pooja</a>.
+							Built with a lots of love <a href="http://html5up.net/license"></a> 
+						</p>
+					</header>
+				</section>
+
+			<!-- Carousel -->
+				<section class="carousel">
+					<div class="reel">
+
+						<article>
+							<a href="#" class="image featured"><img src="static/images/psy.jpg" alt="" /></a>
+							<header>
+								<h3><a href="http://books.google.co.in/books?id=TnrrDwAAQBAJ&printsec=frontcover&dq=The+psychology+of+money
+									&hl=&cd=1&source=gbs_api">Psychology of money</a></h3>
+							</header>
+							<p>By Morgen housel</p>
+						</article>
+
+						<article>
+							<a href="" class="image featured"><img src="static/images/zero.jpeg"alt="" /></a>
+							<header>
+								<h3><a href="http://books.google.co.in/books?id=M22fAwAAQBAJ&printsec=frontcover&dq=zero+to+one&hl=&cd=1&so
+									urce=gbs_api">Zero to One</a></h3>
+							</header>
+							<p>Peter Thiel</p>
+						</article>
+
+						<article>
+							<a href="" class="image featured"><img src="static/images/investor.jpg"style="width:60%; height:auto;" alt="" /></a>
+							<header>
+								<h3><a href="http://books.google.co.in/books?id=-NdcCSt8t_YC&printsec=frontcover&dq=The+intelligent+investo
+r&hl=&cd=1&source=gbs_api">The Intelligent investor</a></h3>
+							</header>
+							<p>By Benjamin Graham</p>
+						</article>
+
+						<article>
+							<a href="" class="image featured"><img src="static/images/babylon.jpg" alt="" height="300"/></a>
+
+							<header>
+								<h3><a href="http://books.google.co.in/books?id=foSqDwAAQBAJ&printsec=frontcover&dq=The+richest+man+in+baby
+									lon&hl=&cd=1&source=gbs_api">The richest man in babylon</a></h3>
+							</header>
+							<p>By George S. Clason</p>
+						</article>
+
+					</div>
+				</section>
+
+			<!-- Main -->
+				<div class="wrapper style2">
+
+					<article id="main" class="container special">
+						<a href="#" class="image featured"><img src="static/images/book.jpg" alt="" /></a>
+						<header>
+							
+							<div>
+								{% from 'bootstrap5/form.html' import render_form %}
+								{{ render_form(form) }}
+							</div>
+						{%if search %}
+							<h2><a href="#">{{title}}</a></h2>
+							<h3>By : {{author}}</h3>
+							
+							
+						</header>
+                        
+						<p>
+                            {{description}}
+						</p>
+						<a href="{{ link }}" target="_blank">Click here for the book</a>
+					{%endif%}
+						<footer>
+							<a href="#" class="button">Continue Reading</a>
+						</footer>
+					</article>
+
+				
+
+			
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+
+							<!-- Tweets -->
+								
+						
+					
+				
+					
+								
+
+							
+								
+
+						
+						<hr />
+						<div class="row">
+							<div class="col-12">
+
+								<!-- Contact -->
+								<section class="contact">
+									<header>
+										<h3>Connect with Me</h3>
+									</header>
+									<p>If you'd like to get in touch, feel free to reach out through the following platforms.</p>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/pooja-saini-5b0684289/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+										<li><a href="mailto:p1219513@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+										<li><a href="https://github.com/Pooja389" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									</ul>
+								</section>
+								
+
+								<!-- Copyright -->
+									<div class="copyright">
+										<ul class="menu">
+											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.dropotron.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
