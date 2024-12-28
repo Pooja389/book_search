@@ -7,7 +7,7 @@ from flask_bootstrap import Bootstrap5
 
 app = Flask(__name__)
 Bootstrap5(app)
-app.config['SECRET_KEY'] = 'poojasaini' 
+app.config['SECRET_KEY'] = 'your_secret_key' 
 
 # Define the form class
 class BookSearchForm(FlaskForm):
