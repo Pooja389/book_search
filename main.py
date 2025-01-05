@@ -1,4 +1,4 @@
-import requests
+import requests,os
 from flask import Flask, render_template
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
@@ -15,7 +15,7 @@ class BookSearchForm(FlaskForm):
     submit = SubmitField("Search")
 
 
-api_key = "AIzaSyBXgHzf6Pu_nXzVtcJwoBFa9M7Gvwx8iJI"
+api_key = os.getenv("api_key")
 base_url = "https://www.googleapis.com/books/v1/volumes"
 # Define routes
 @app.route("/", methods=["GET", "POST"])
