@@ -27,6 +27,7 @@ def home():
         response = requests.get(url)
 
         data = response.json()
+        print(data)
         info = data["items"][0]["volumeInfo"]
         title = info["title"]
         author = info["authors"][0]
