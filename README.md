@@ -24,7 +24,7 @@ To get started with the project, clone the repository and install the required d
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Pooja389/book_web.git
+   git clone https://github.com/Pooja389/book_search.git
    ```
 2. **Navigate to the project directory**
    ```bash
